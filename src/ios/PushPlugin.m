@@ -117,7 +117,7 @@
         NSLog(@"PushPlugin.register: Push notification type is set to none");
 
     isInline = NO;
-
+/*
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
     if ([[UIApplication sharedApplication]respondsToSelector:@selector(registerUserNotificationSettings:)]) {
         UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UserNotificationTypes categories:nil];
@@ -129,7 +129,7 @@
 #else
 		[[UIApplication sharedApplication] registerForRemoteNotificationTypes:notificationTypes];
 #endif
-
+*/
 	if (notificationMessage)			// if there is a pending startup notification
 		[self notificationReceived];	// go ahead and process it
 }
@@ -142,6 +142,7 @@
 }
 */
 
+/*
 - (void)didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 
     NSMutableDictionary *results = [NSMutableDictionary dictionary];
@@ -195,6 +196,7 @@
 {
 	[self failWithMessage:@"" withError:error];
 }
+*/
 
 - (void)notificationReceived {
     NSLog(@"Notification received");
